@@ -7,6 +7,25 @@ html {
   scroll-behavior: smooth;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #2D3142; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #2D3142; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2D3142; 
+}
 
 @media only screen   
 and (min-device-width : 1729px)   {
@@ -19,26 +38,6 @@ body {
 	height: 100vh;
 	overflow-x: hidden;
 	line-height: 30px;
-}
-
-/* width */
-::-webkit-scrollbar {
-  width: 20px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1; 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #EF8354; 
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #2D3142; 
 }
 
 a,
