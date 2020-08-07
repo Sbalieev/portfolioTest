@@ -2,23 +2,27 @@
 	opacity: 0;
 }
 
-nav { 
-	animation: nav 2s linear;
+@media only screen   
+and (min-device-width : 1729px)   {
+	nav { 
+		animation: nav 2s linear;
+	}
+
+	@keyframes nav {
+	  from {border-top: 10px solid #4F5D75;}
+	  to {border-top: 10px solid #EF8354;}
+	}
+
+	.active {
+		animation: activeLi 2s linear ;
+	}
+
+	@keyframes activeLi {
+		from {background-color: #4F5D75;}
+		to {background-color: #EF8354;}
+	}
 }
 
-@keyframes nav {
-  from {border-top: 10px solid #4F5D75;}
-  to {border-top: 10px solid #EF8354;}
-}
-
-.active {
-	animation: activeLi 2s linear ;
-}
-
-@keyframes activeLi {
-	from {background-color: #4F5D75;}
-	to {background-color: #EF8354;}
-}
 
 .animatieHeader {
 	position: relative; 
@@ -327,4 +331,75 @@ nav {
   animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+}
+
+
+
+/* Icon Wobble Vertical */
+@-webkit-keyframes wobble {
+  16.65% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes wobble {
+  16.65% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+#down {
+	animation-name: wobble;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in-out;
+	animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
 }
